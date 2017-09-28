@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#CCC" />
+        </shape>
+    </item>
+    <item android:bottom="@dimen/activity_group_row_border_width">
+        <shape>
+            <stroke android:color="#fff" /><!--边框颜色-->
+            <solid android:color="#fff" /><!--填充色-->
+            <corners android:radius="0dp" />
+            <padding android:bottom="@dimen/activity_group_row_margin_bottom"
+                android:top="@dimen/activity_group_row_margin_top"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#CCC" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+    <item android:bottom="1dp" android:top="1dp" android:left="1dp" android:right="1dp">
+        <shape>
+            <stroke android:color="#fff" /><!--边框颜色-->
+            <solid android:color="#3366ff" /><!--填充色-->
+            <corners android:radius="5dp" />
+            <padding
+                android:left="@dimen/activity_file_show_padding_left"
+                android:bottom="@dimen/activity_file_show_padding_bottom"
+                android:top="@dimen/activity_file_show_padding_top"
+                android:right="@dimen/activity_file_show_padding_right"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorTitleBG"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorTitleText"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical">
+
+            <TextView
+                android:id="@+id/configure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/title_home_configure"
+                android:textColor="@color/colorTitleText"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 信息展示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- 信息展示——SIM -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_home_card_margin"
+                android:layout_weight="1"
+                android:background="@drawable/style_info_card"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="SIM" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="卡1：" />
+
+                    <TextView
+                        android:id="@+id/info_sim_phone1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="卡2：" />
+
+                    <TextView
+                        android:id="@+id/info_sim_phone2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="网络制式：" />
+
+                    <TextView
+                        android:id="@+id/info_sim_net"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="移动数据：" />
+
+                    <TextView
+                        android:id="@+id/info_sim_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="信号强度：" />
+
+                    <TextView
+                        android:id="@+id/info_sim_signal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 信息展示——设置 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_home_card_margin"
+                android:layout_weight="1"
+                android:background="@drawable/style_info_card"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="设置" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="字体：" />
+
+                    <TextView
+                        android:id="@+id/info_setting_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="语言：" />
+
+                    <TextView
+                        android:id="@+id/info_setting_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="亮度：" />
+
+                    <TextView
+                        android:id="@+id/info_setting_brightness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="存储：" />
+
+                    <TextView
+                        android:id="@+id/info_setting_storage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="内存：" />
+
+                    <TextView
+                        android:id="@+id/info_setting_memory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- 信息展示——WIFI -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_home_card_margin"
+                android:layout_weight="1"
+                android:background="@drawable/style_info_card"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="WIFI" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="状态：" />
+
+                    <TextView
+                        android:id="@+id/info_wifi_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="类型：" />
+
+                    <TextView
+                        android:id="@+id/info_wifi_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="信号强度：" />
+
+                    <TextView
+                        android:id="@+id/info_wifi_signal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 信息展示——BT -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_home_card_margin"
+                android:layout_weight="1"
+                android:background="@drawable/style_info_card"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="BT" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="状态：" />
+
+                    <TextView
+                        android:id="@+id/info_bt_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="连接状态：" />
+
+                    <TextView
+                        android:id="@+id/info_bt_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="信号强度：" />
+
+                    <TextView
+                        android:id="@+id/info_bt_signal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- 信息展示——APP -->
+            <LinearLayout
+                android:id="@+id/info_app"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_home_card_margin"
+                android:layout_weight="1"
+                android:background="@drawable/style_info_card"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="APP" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="数量：" />
+
+                    <TextView
+                        android:id="@+id/info_app_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点击查看详情>>" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 信息展示——电量 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_home_card_margin"
+                android:layout_weight="1"
+                android:background="@drawable/style_info_card"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="电量" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电量：" />
+
+                    <TextView
+                        android:id="@+id/info_electricity_electricity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="模式：" />
+
+                    <TextView
+                        android:id="@+id/info_electricity_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_start_or_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorButtonEnabled"
+            android:text="开始"
+            android:textColor="@color/colorTitleText"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@color/colorButtonDisabled"
+            android:enabled="false"
+            android:text="记录"
+            android:textColor="@color/colorTitleText"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
